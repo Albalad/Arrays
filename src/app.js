@@ -1,7 +1,7 @@
 let pronombre = ['la', 'el', 'los', 'quien'];
 let adjetivo = ['mayor', 'intoxicado', 'perfecto', 'genial'];
 let nombre = ['porqueria', 'mapache', 'camion'];
-let d=(".com");
+let extension = [".com", ".net", ".us", ".io"];
 
 for(let i = 0; i < pronombre.length; i++){
   let a = pronombre[i];
@@ -9,7 +9,10 @@ for(let i = 0; i < pronombre.length; i++){
     let b = adjetivo[j];
     for(let k = 0; k < nombre.length; k++){
       let c = nombre[k];
-      console.log(a+b+c+d);
+      for(let l = 0; l < extension.length; l++){
+        let d = extension[l];
+        console.log(a+b+c+d);
+      }
     }
   }
 }
