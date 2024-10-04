@@ -1,6 +1,6 @@
-let pronombre = ['la', 'el'];
-let adjetivo = ['mayor', 'intoxicado'];
-let nombre = ['porqueria', 'mapache'];
+let pronombre = ['la', 'el', 'los', 'quien'];
+let adjetivo = ['mayor', 'intoxicado', 'perfecto', 'genial'];
+let nombre = ['porqueria', 'mapache', 'camion'];
 let d=(".com");
 
 for(let i = 0; i < pronombre.length; i++){
