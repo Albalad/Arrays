@@ -18,10 +18,12 @@ for (let i = 0; i < pronombre.length; i++) {
         let r = "." + c.slice(-2);
         let p = c.replace(c.slice(-2), r);
         console.log(a + b + p);
+
       } else if (c.slice(-3) === extension.find(i => i === c.slice(-3))) {
-        let s = "." + c.slice(-3);
-        let q = c.replace(c.slice(-3), s);
-        console.log(a + b + q);
+          let s = "." + c.slice(-3);
+          let q = c.replace(c.slice(-3), s);
+          console.log(a + b + q);
+        
       } else {
         for (let l = 0; l < extension.length; l++) {
           let d = extension[l];
