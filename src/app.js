@@ -4,7 +4,6 @@ let nombre = ["porqueria", "comicom", "camion", "trusous"];
 let extension = [".com", ".net", ".us", ".io"];
 
 function generadorDominio() {
-  let posiblesDominios = "";
   for (let i = 0; i < pronombre.length; i++) {
     for (let j = 0; j < adjetivo.length; j++) {
       for (let k = 0; k < nombre.length; k++) {
