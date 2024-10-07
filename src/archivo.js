@@ -20,7 +20,7 @@ function generadorDominio() {
         let c = nombre[k];
         for (let l = 0; l < extension.length; l++) {
             let d = extension[l];
-            posiblesDominios += a + b + c + "." + d;
+            posiblesDominios = a + b + c + "." + d;
             return posiblesDominios;
         }
         }
