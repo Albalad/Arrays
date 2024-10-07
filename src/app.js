@@ -3,35 +3,60 @@ let adjetivo = ["mayor", "intoxicado", "perfecto", "genial"];
 let nombre = ["porqueria", "mapache", "colacom", "trenes"];
 let extension = ["com", "net", "es", "io"];
 
-console.log(nombre[2].slice(-3));
+function generadorDominio() {
+  // Variable para almacenar los resultados
+  let posiblesDominios = "";
 
-for (let i = 0; i < pronombre.length; i++) {
-  let a = pronombre[i];
+  //Almacenamos los valores de pronombre en a
+  for (let i = 0; i < pronombre.length; i++) {
+    let a = pronombre[i];
 
-  for (let j = 0; j < adjetivo.length; j++) {
-    let b = adjetivo[j];
+    //Almacenamos los valores de adjetivo en b
+    for (let j = 0; j < adjetivo.length; j++) {
+      let b = adjetivo[j];
 
-    for (let k = 0; k < nombre.length; k++) {
-      let c = nombre[k];
+      //Almacenamos los valores de nombre en c
+      for (let k = 0; k < nombre.length; k++) {
+        let c = nombre[k];
 
-      if (c.slice(-2) === extension.find(o => o === c.slice(-2))) {
-        let r = "." + c.slice(-2);
-        let p = c.replace(c.slice(-2), r);
-        console.log(a + b + p);
+        //Comprobamos si c acaba en alguna extension
+        // if (c.slice(-2) === extension[2]) {
+        //   let p = c.replace(c.slice(-2), "." + extension[2]);
+        //   posiblesDominios += a + b + p + "<br>";
+        // }
 
-      } else if (c.slice(-3) === extension.find(z => z === c.slice(-3))) {
-          let s = "." + c.slice(-3);
-          let q = c.replace(c.slice(-3), s);
-          console.log(a + b + q);
-
-          //En vez de sustituir las tres últimas, meter un . justo delante
-        
-      } else {
+        //Almacenamos los valores de extension en d
         for (let l = 0; l < extension.length; l++) {
           let d = extension[l];
-          console.log(a + b + c + "." + d);
+
+          if (c.slice(-2) === extension.find(o => o === c.slice(-2))) {
+            let r = "." + c.slice(-2);
+            let p = c.replace(c.slice(-2), r);
+            posiblesDominios += a + b + p + "<br>";
+
+            // sustituimos el final por el .extension
+          }
+          if (c.slice(-3) === extension.find(z => z === c.slice(-3))) {
+            let s = "." + c.slice(-3);
+
+            //sustituimos el final por el .extension
+            let q = c.replace(c.slice(-3), s);
+            posiblesDominios += a + b + q + "<br>";
+          }
+          // posiblesDominios += a + b + c + "." + d + "<br>";
         }
       }
     }
   }
+  document.getElementById("posiblesDominios").innerHTML = posiblesDominios;
 }
+
+window.onload = function() {
+  generadorDominio();
+};
+
+//for (let i = 0; i < pronoun.length; i++) {
+// for (let j = 0; j < adj.length; j++) {
+//   for (let k = 0; k < noun.length; k++) {
+//     for (let l = 0; l < domain.length; l++) {
+//       let strDomainName = pronoun[i] + adj[j] + noun[k] + domain[l];
