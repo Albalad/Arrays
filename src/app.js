@@ -10,20 +10,12 @@ function generadorDominio() {
         for (let l = 0; l < extension.length; l++) {
           if (nombre[k].slice(-2) === extension[l].slice(1)) {
             let replace = nombre[k].slice(0, -2) + extension[l];
-            posiblesDominios += console.log(
-              pronombre[i] + adjetivo[j] + replace
-            );
-          }
-
-          if (nombre[k].slice(-3) === extension[l].slice(1)) {
+            console.log(pronombre[i] + adjetivo[j] + replace);
+          }else if (nombre[k].slice(-3) === extension[l].slice(1)) {
             let replace = nombre[k].slice(0, -3) + extension[l];
-            posiblesDominios += console.log(
-              pronombre[i] + adjetivo[j] + replace
-            );
+            console.log(pronombre[i] + adjetivo[j] + replace);
           } else {
-            posiblesDominios += console.log(
-              pronombre[i] + adjetivo[j] + nombre[k] + extension[l]
-            );
+            console.log(pronombre[i] + adjetivo[j] + nombre[k] + extension[l]);
           }
         }
       }
